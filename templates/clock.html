@@ -1,0 +1,65 @@
+<html>
+     <head>
+          <style>
+               @import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+               body{
+                    align-items: center;
+                    background: #afd275;
+                    display: grid;
+                    grid-column-gap: 3rem;
+                    grid-template-columns: 400px;
+                    height: 50vh;
+                    justify-content: center;
+                    padding: 1rem;
+               }
+               .time{
+                    margin-top: 200px;
+                    width: 450px;
+                    color: black;
+                    background-color: #d2dbdd;
+                    font-family: 'Zen Dots', cursive;
+                    border-radius: 5px;
+                    align-items: center;
+               }
+               .time small{
+                    font-size: 30px;
+               }
+               .element{
+                    align-items: center;
+                    background: linear-gradient(-45deg, rgba(0,0,0,0.22), rgba(255,255,255,0.25));
+                    border-radius: 50px;
+                    margin-top: 20px;
+                    display: flex;
+                    height: 200px;
+                    justify-content: center;
+                    width: 100%;
+               }
+               .element-1{
+                    box-shadow: 
+                         12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+                         -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+               }
+               .element-2{
+                    box-shadow: 
+                         12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+                         -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+               }
+          </style>
+     </head>
+<body>
+<form action="" method="GET" id="current-time"></form>
+
+<div class="container element-1 element time">
+     <h1>{{time}}</h1>     
+</div>
+<di class="container element-2 element time">
+     <small class="text-dark">{{date}}</small></div>
+</body>
+</html>
+
+<script>
+function getTime(){
+     document.getElementById('current-time').submit();
+}
+setInterval(getTime,1000);
+</script>
